@@ -6,6 +6,7 @@ on:
       - main
       - 'feature/**'
       - 'bugfix/**' 
+      - 'features/**'
   workflow_dispatch:
     
 env:  
@@ -148,4 +149,5 @@ jobs:
           project: ${{ env.OCTOPUS_PROJECT_NAME }}
           release_number: ${{ steps.ReleaseNum.outputs.APP_VERSION }}
           environments: ${{ steps.ReleaseNum.outputs.OCTOPUS_ENVIRONMENT }}
+
 
